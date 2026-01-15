@@ -31,7 +31,7 @@ jobs:
             repos/${{ github.repository }}/commits/${{ github.sha }}/pulls \
             -q '.[0].head.ref')
 
-            echo: "$PR_BRANCH"
+            echo "$PR_BRANCH"
           
           if [[ -z "$PR_BRANCH" ]]; then
             echo "Merge commit not found."
